@@ -22,10 +22,8 @@ Gillian Games has also instructed me to find out the general financial trends of
 
 ### **Data Report:**
 
-<img width="1192" height="666" alt="image" src="https://github.com/user-attachments/assets/c12a3d83-e660-417d-a11b-053491188d3c" />
-
-To interact with the dashboard, see the Power BI section of the project, linked here:
-
+<img width="1192" height="668" alt="image" src="https://github.com/user-attachments/assets/b2c26dcc-4870-4818-9c01-fd1a69e5dce3" />  
+  
 ### **Data Preprocessing:**
 
 The challenge of this project was that it was done completely in Power BI. There was no Python preprocessing or SQL analysis. In Power BI, most cleaning can be done in the Power Query, which operates similarly to Excel. Because of this, most general preprocessing was smooth, but when it came to construction of the data model itself, there was one major hurdle to solve: The bridge tables.
@@ -33,12 +31,17 @@ The challenge of this project was that it was done completely in Power BI. There
 One of the most useful indicators in this dataset are Genres and Tags, as they indicate the kinds of games that are popular. However, their data structure was difficult to work with, since each videogame contains multiple genres and tags. These genres and tags were all placed into 1 cell per row and delimited by a comma like so:
 
 <img width="1117" height="161" alt="image" src="https://github.com/user-attachments/assets/b04e1464-e4ec-48cf-b885-2eb688c97ae3" />
+<br>
 
 In Python, I would simply explode the data in a seperate table, but since everything is done in Power BI, it must be done in Power Query (Basically Excel). Thankfully, Power Query has a mechanism for splitting rows, so the process was simple. For genres, I created a seperate 'genre' table that contained the AppID (the dataset's primary key) and the genres in their raw form, as seen above. Then I created a bridge table 'genre bridge' that splits the data into one genre per row and duplicates the App ID. as shown below:
 
+<div align="center">
 <img width="398" height="293" alt="image" src="https://github.com/user-attachments/assets/17949c5d-e64a-4049-aca3-f2caf96c6a7c" />
+</div>
+<br>
 
 This ensures each individual tag flows through the model as a many-to-1 relationship. I repeated the process for 'Tags' and 'Language.' Below is the final model:
+<br>
 
 <img width="1422" height="713" alt="image" src="https://github.com/user-attachments/assets/21f080cf-6cc5-4693-9e6c-5cfbddb41745" />
 
@@ -57,7 +60,7 @@ Based on these visuals, A vast majority of games have **English** as a language,
 
 - What are the most common tags and genres for videogames on Steam?
 
-<img width="1242" height="321" alt="image" src="https://github.com/user-attachments/assets/fdc99889-841a-4b76-94a1-2643b837a30f" />
+<img width="1156" height="297" alt="image" src="https://github.com/user-attachments/assets/9855ff21-31cb-4a3d-9029-f97957c26d75" />
 
 - What are some of the revenue statistics of Steam Games?
 
