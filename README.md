@@ -44,6 +44,7 @@ This ensures each individual tag flows through the model as a many-to-1 relation
 <br>
 
 <img width="1422" height="713" alt="image" src="https://github.com/user-attachments/assets/21f080cf-6cc5-4693-9e6c-5cfbddb41745" />
+<br>
 
 It looks complex, but the important thing is that everything in the model has a 1-to-many, many-to-1 or 1-to-1 relationship, ensuring smooth filtration.
 
@@ -55,17 +56,19 @@ Let's looks at some of the visuals and answer the previous data questions.
 - Do games usually have a required age? If so, what is the distribution?
 
 <img width="1072" height="252" alt="image" src="https://github.com/user-attachments/assets/212be289-6795-496f-af20-e8b883b749b2" />
+<br>
 
 Based on these visuals, A vast majority of games have **English** as a language, support **Mac or Linux + Mac** (Linux only seems like a disasterous idea). Most games also have no required age, allowing them to cast a wide audience net outside of specific niches.
-
+  
 - What are the most common tags and genres for videogames on Steam?
 
 <img width="1156" height="297" alt="image" src="https://github.com/user-attachments/assets/9855ff21-31cb-4a3d-9029-f97957c26d75" />
+<br>
 
 - What are some of the revenue statistics of Steam Games?
 
 <img width="1127" height="212" alt="image" src="https://github.com/user-attachments/assets/885c31d4-dc13-4af4-a473-9c72d0acb347" />
-
+<br>
 Based on these visuals, it appears that player count follows revenue very closely. This is supported by the fact that the overall average price of videogames doesn't fluctuate very much. The only exception to this matching trend is 2023.
 
 There isn't a strong relationship between number of games released and their average price. More and more games have been released each year without fail, but average price remains between 6-7 dollars.
