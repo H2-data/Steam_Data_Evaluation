@@ -19,7 +19,6 @@ Gillian Games has also instructed me to find out the general financial trends of
 
 - Which genres are associated with the most revenue and the least revenue?
 - How have revenue, total players, total games and average price changed from 2017-2024?
-- What is the average price to revenue ratio of each game?
 
 ### **Data Report:**
 
@@ -58,8 +57,14 @@ Based on these visuals, A vast majority of games have **English** as a language,
 
 - What are the most common tags and genres for videogames on Steam?
 
+<img width="1242" height="321" alt="image" src="https://github.com/user-attachments/assets/fdc99889-841a-4b76-94a1-2643b837a30f" />
 
+- What are some of the revenue statistics of Steam Games?
+
+<img width="1127" height="212" alt="image" src="https://github.com/user-attachments/assets/885c31d4-dc13-4af4-a473-9c72d0acb347" />
 
 ### **Analyst Comments:**
 
-- This dashboard list should be updated with fresh data annually. As long as the data schema is maintained, it can be sent through the pipeline found in each part of the project (Python -> SQL -> Power BI). It will score the medications and organize them by liability.
+- When looking over these numbers, it's important to note that 'Genre' and 'Tag' statistics regarding revenue should be taken with a grain of salt, as there are more genre descriptions than games themselves multipled by the raw videogame revenue. The most reliable statistic is the count of genres.
+
+- Since Gillian Games is looking to cast a wide net for the highest likelihood of success, I have found and targeted the highest or majority distributions. For more niche analyses regarding specific genres, further specification and analysis of data is needed.
