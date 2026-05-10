@@ -63,6 +63,12 @@ Based on these visuals, A vast majority of games have **English** as a language,
 
 <img width="1127" height="212" alt="image" src="https://github.com/user-attachments/assets/885c31d4-dc13-4af4-a473-9c72d0acb347" />
 
+Based on these visuals, it appears that player count follows revenue very closely. This is supported by the fact that the overall average price of videogames doesn't fluctuate very much. The only exception to this matching trend is 2023.
+
+There isn't a strong relationship between number of games released and their average price. More and more games have been released each year without fail, but average price remains between 6-7 dollars.
+
+Action, Adventure and RPG games have high revenue compared to the number of games. Indie and Casual games are the opposite, they lack revenue results despite high distributions. For Indie games, the trend isn't necessarily negative. Indie studios are numerous and Indie games are the most dominant overall genre, and have a lower ceiling for creation, leading to more dubious financial results. Casual games have no such excuse, and might not be a good fit for these initial releases.
+
 ### **Analyst Comments:**
 
 - When looking over these numbers, it's important to note that 'Genre' and 'Tag' statistics regarding revenue should be taken with a grain of salt, as there are more genre descriptions than games themselves multipled by the raw videogame revenue. The most reliable statistic is the count of genres.
