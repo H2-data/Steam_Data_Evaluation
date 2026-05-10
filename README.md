@@ -1,1 +1,59 @@
-# Videogame_Company
+<div align="center">
+
+# Steam Market Evaluation
+
+</div>
+
+---
+
+### **Scenario and Objective:**
+
+Gillian Games (Not a real company) is a new indie games studio looking to publish videogames. They only recently acquired the necessary production funding, so success with the first few games released is paramount. In order to ensure their success, the company has asked me and a few other analysts to take some data from Steam and find the standard trends of the industry. The dataset spans from 2017-2024, and it contains several videogame titles and their subsequent attributes and financial performance. I will plug this dataset into Power BI in order to answer the following questions:
+
+- Do more games have Mac interface, Linux interface or both?
+- Do games usually have a required age? If so, what is the distribution?
+- What are the most common tags and genres for videogames?
+- What common languages are usually available for a game?
+
+Gillian Games has also instructed me to find out the general financial trends of the industry. To accomplish this, I will answer the following questions:
+
+- Which genres are associated with the most revenue and the least revenue?
+- How have revenue, total players, total games and average price changed from 2017-2024?
+- What is the average price to revenue ratio of each game?
+
+### **Data Report:**
+
+<img width="1192" height="666" alt="image" src="https://github.com/user-attachments/assets/c12a3d83-e660-417d-a11b-053491188d3c" />
+
+To interact with the dashboard, see the Power BI section of the project, linked here:
+
+### **Data Preprocessing:**
+
+The challenge of this project was that it was done completely in Power BI. There was no Python preprocessing or SQL analysis. In Power BI, most cleaning can be done in the Power Query, which operates similarly to Excel. Because of this, most general preprocessing was smooth, but when it came to construction of the data model itself, there was one major hurdle to solve: The bridge tables.
+
+One of the most useful indicators in this dataset are Genres and Tags, as they indicate the kinds of games that are popular. However, their data structure was difficult to work with, since each videogame contains multiple genres and tags. These genres and tags were all placed into 1 cell per row and delimited by a comma like so:
+
+<img width="1117" height="161" alt="image" src="https://github.com/user-attachments/assets/b04e1464-e4ec-48cf-b885-2eb688c97ae3" />
+
+In Python, I would simply explode the data in a seperate table, but since everything is done in Power BI, it must be done in Power Query (Basically Excel). Thankfully Power Query has a mechanism for splitting rows, so the process was simple. For genres, I created a seperate 'genre' table that contained the AppID (the dataset's primary key) and the genres in their raw form, as seen above. Then I created a bridge table 'genre bridge' that splits the data into one genre per row and duplicates the App ID. as shown below:
+
+<img width="398" height="293" alt="image" src="https://github.com/user-attachments/assets/17949c5d-e64a-4049-aca3-f2caf96c6a7c" />
+
+This ensures each individual tag flows through the model as a many-to-1 relationship. I repeated the process for 'Tags' and 'Language.' Below is the final model:
+
+<img width="1422" height="713" alt="image" src="https://github.com/user-attachments/assets/21f080cf-6cc5-4693-9e6c-5cfbddb41745" />
+
+It looks complex, but the important thing is that everything in the model has a 1-to-many or many-to-1 or 1-to-1 relationship, ensuring smooth filtration.
+
+### **Analysis and Results:**
+
+Let's looks at some of the visuals and answer the previous data questions.
+
+- Do more games have Mac interface, Linux interface or both?
+- Do games usually have a required age? If so, what is the distribution?
+
+<img width="1072" height="252" alt="image" src="https://github.com/user-attachments/assets/212be289-6795-496f-af20-e8b883b749b2" />
+
+### **Analyst Recommendations:**
+
+- This dashboard list should be updated with fresh data annually. As long as the data schema is maintained, it can be sent through the pipeline found in each part of the project (Python -> SQL -> Power BI). It will score the medications and organize them by liability.
