@@ -12,7 +12,7 @@ Gillian Games (Not a real company) is a new indie games studio looking to publis
 
 - Do more games have Mac interface, Linux interface or both?
 - Do games usually have a required age? If so, what is the distribution?
-- What are the most common tags and genres for videogames?
+- What are the most common tags and genres for videogames on Steam?
 - What common languages are usually available for a game?
 
 Gillian Games has also instructed me to find out the general financial trends of the industry. To accomplish this, I will answer the following questions:
@@ -35,7 +35,7 @@ One of the most useful indicators in this dataset are Genres and Tags, as they i
 
 <img width="1117" height="161" alt="image" src="https://github.com/user-attachments/assets/b04e1464-e4ec-48cf-b885-2eb688c97ae3" />
 
-In Python, I would simply explode the data in a seperate table, but since everything is done in Power BI, it must be done in Power Query (Basically Excel). Thankfully Power Query has a mechanism for splitting rows, so the process was simple. For genres, I created a seperate 'genre' table that contained the AppID (the dataset's primary key) and the genres in their raw form, as seen above. Then I created a bridge table 'genre bridge' that splits the data into one genre per row and duplicates the App ID. as shown below:
+In Python, I would simply explode the data in a seperate table, but since everything is done in Power BI, it must be done in Power Query (Basically Excel). Thankfully, Power Query has a mechanism for splitting rows, so the process was simple. For genres, I created a seperate 'genre' table that contained the AppID (the dataset's primary key) and the genres in their raw form, as seen above. Then I created a bridge table 'genre bridge' that splits the data into one genre per row and duplicates the App ID. as shown below:
 
 <img width="398" height="293" alt="image" src="https://github.com/user-attachments/assets/17949c5d-e64a-4049-aca3-f2caf96c6a7c" />
 
@@ -43,7 +43,7 @@ This ensures each individual tag flows through the model as a many-to-1 relation
 
 <img width="1422" height="713" alt="image" src="https://github.com/user-attachments/assets/21f080cf-6cc5-4693-9e6c-5cfbddb41745" />
 
-It looks complex, but the important thing is that everything in the model has a 1-to-many or many-to-1 or 1-to-1 relationship, ensuring smooth filtration.
+It looks complex, but the important thing is that everything in the model has a 1-to-many, many-to-1 or 1-to-1 relationship, ensuring smooth filtration.
 
 ### **Analysis and Results:**
 
@@ -54,6 +54,12 @@ Let's looks at some of the visuals and answer the previous data questions.
 
 <img width="1072" height="252" alt="image" src="https://github.com/user-attachments/assets/212be289-6795-496f-af20-e8b883b749b2" />
 
-### **Analyst Recommendations:**
+Based on these visuals, A vast majority of games have **English** as a language, support **Mac or Linux + Mac** (Linux only seems like a disasterous idea). Most games also have no required age, allowing them to cast a wide audience net outside of specific niches.
+
+- What are the most common tags and genres for videogames on Steam?
+
+
+
+### **Analyst Comments:**
 
 - This dashboard list should be updated with fresh data annually. As long as the data schema is maintained, it can be sent through the pipeline found in each part of the project (Python -> SQL -> Power BI). It will score the medications and organize them by liability.
