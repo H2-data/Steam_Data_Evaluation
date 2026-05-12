@@ -26,7 +26,7 @@ Gillian Games has also instructed me to find out the general financial trends of
   
 ### **Data Preprocessing:**
 
-The challenge of this project was that it was done completely in Power BI. There was no Python preprocessing or SQL analysis. In Power BI, most cleaning can be done in the Power Query, which operates similarly to Excel. Because of this, most general preprocessing was smooth, but when it came to construction of the data model itself, there was one major hurdle to solve: The bridge tables.
+The challenge of this project was that it was done completely in Power BI. There was no Python preprocessing or SQL analysis. In Power BI, most cleaning can be done in Power Query, which operates similarly to Excel. Because of this, most general preprocessing was smooth, but when it came to construction of the data model itself, there was one major hurdle to solve: The bridge tables.
 
 One of the most useful indicators in this dataset are Genres and Tags, as they indicate the kinds of games that are popular. However, their data structure was difficult to work with, since each videogame contains multiple genres and tags. These genres and tags were all placed into 1 cell per row and delimited by a comma like so:
 
@@ -40,7 +40,7 @@ In Python, I would simply explode the data in a seperate table, but since everyt
 </div>
 <br>
 
-This ensures each individual tag flows through the model as a many-to-1 relationship. I repeated the process for 'Tags' and 'Language.' Below is the final model:
+This ensures each individual genre flows through the model as a many-to-1 relationship. I repeated the process for 'Tags' and 'Language.' Below is the final model:
 <br>
 
 <img width="1422" height="713" alt="image" src="https://github.com/user-attachments/assets/21f080cf-6cc5-4693-9e6c-5cfbddb41745" />
