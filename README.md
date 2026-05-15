@@ -64,6 +64,7 @@ Based on these visuals, A vast majority of games have **English** as a language,
 
 <img width="1156" height="297" alt="image" src="https://github.com/user-attachments/assets/9855ff21-31cb-4a3d-9029-f97957c26d75" />
 <br>
+<br>
 
 - What are some of the revenue statistics of Steam Games?
 
