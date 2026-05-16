@@ -6,6 +6,10 @@
 
 ---
 
+### **Important Notes:**
+
+- The data used in this project is a public dataset, it is not confidential data.
+
 ### **Scenario and Objective:**
 
 Gillian Games (Not a real company) is a new indie games studio looking to publish videogames. They only recently acquired the necessary production funding, so success with the first few games released is paramount. In order to ensure their success, the company has asked me and a few other analysts to take some data from Steam and find the standard trends of the industry. The dataset spans from 2017-2024, and it contains several videogame titles and their subsequent attributes and financial performance. I will plug this dataset into Power BI in order to answer the following questions:
@@ -23,6 +27,10 @@ Gillian Games has also instructed me to find out the general financial trends of
 ### **Data Report:**
 
 <img width="1192" height="668" alt="image" src="https://github.com/user-attachments/assets/b2c26dcc-4870-4818-9c01-fd1a69e5dce3" />  
+
+The interactable dashboard and data model can be found in the link below:
+
+[Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMTUzMzc2NGEtMmY5NC00MjVmLTkyNzAtMTZjYWZjN2RkOGNlIiwidCI6ImRmZWM4YzJjLThlNWUtNDI4Yy05MmE4LTkzOTI1ZjM3Y2JlYiJ9)
   
 ### **Data Preprocessing:**
 
